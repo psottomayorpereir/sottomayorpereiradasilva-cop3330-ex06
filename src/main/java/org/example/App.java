@@ -22,7 +22,14 @@ public class App
         ret=Integer.parseInt(ret_age);
         age_diff=ret-cur;
 
-        System.out.println("You have " + age_diff + " years left until you can retire.");
-        System.out.println("It is " + cur_year + ", so you can retire in " + (cur_year+age_diff) + ".");
+        if(age_diff<0){
+            System.out.println("You can already retire!");
+        }//end if
+
+        else{
+            System.out.println("You have " + age_diff + " years left until you can retire.");
+            System.out.println("It is " + cur_year + ", so you can retire in " + (cur_year+age_diff) + ".");
+        }//end else
+
     }
 }
